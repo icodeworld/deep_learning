@@ -1,6 +1,14 @@
 # colab使用谷歌云中文件
 
-默认是不能读入google drive的数据的，每次都要重新上传，费时费力。所以这篇博客是让colab用户能够使用google drive的工作文件夹
+### 无法一劳永逸
+
+> Google Colab最大的不足就是使用虚拟机，这意味着什么呢？
+>
+> 这意味着我们自行安装的库，比如Keras，在虚拟机重启之后，就会被复原，数据无法持久化。为了能够持久保存数据，我们可以借助Google Drive。还记得我们之前为了挂载Google Drive所做的操作吗？<u>这也同样意味着重启之后，要使用Google Drive，又要把上面的步骤执行一遍。更糟糕的是，不仅仅是虚拟机重启会这样，在Google Colab的会话断掉之后也会这样，而Google Colab的会话最多能够持续12小时</u>。
+>
+> 当然，Google Colab已经默认安装了Tensorflow的环境，如果你是准备使用Tensorflow进行深度学习，那还是不错的，但也仅限于小型的数据建模。
+>
+> <u>默认是不能读入google drive的数据的，每次都要重新上传，费时费力。所以这篇博客是让colab用户能够使用google drive的工作文件夹</u>
 
 ### step1
 
@@ -49,6 +57,16 @@ vcode = getpass.getpass()
 ```
 import os
 os.chdir("drive/Colab Notebooks") 
+```
+
+### 单个文件替代方案
+
+```python
+from google.colab import drive
+drive.mount('/content/drive/')
+
+import os
+os.chdir("drive/My Drive/driver/assignment") 
 ```
 
 参考链接：https://www.jianshu.com/p/1c1f47748827
