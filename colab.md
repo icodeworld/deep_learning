@@ -1,6 +1,7 @@
 # colab使用谷歌云中文件
 
 默认是不能读入google drive的数据的，每次都要重新上传，费时费力。所以这篇博客是让colab用户能够使用google drive的工作文件夹
+
 ### step1
 
 首先需要让colab获得google drive的授权，但需要先装包：
