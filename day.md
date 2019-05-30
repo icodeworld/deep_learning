@@ -30,18 +30,5 @@ coord.join(threads)
 
 
 
-# 卷积CNN
-
-##### 借助卷积核提取特征后，送入全连接网络
-
-```
-主要模块：卷积	激活	池化 全连接（FC）
-发展历史：Lenet-5 AlexNet VGGNet	googleNet ResNet
-```
-
-VALID(不全0填充）	输出图片边长 =（输入图片边长 - 卷积核长+1）/步长（向上取整）
-
-​	padding：SAME 全0填充 	输出图片边长 = 入长/步长（向上取整）
-
-![1557370835642](D:\Userlist\桌面\assets\1557370835642.png)
-
+# Retrieve dimensions from tensor
+    m, n_H, n_W, n_C = a_G.get_shape().as_list()

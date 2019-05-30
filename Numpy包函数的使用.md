@@ -69,7 +69,8 @@
 | np.square(ndarray)                                           | 计算x^2                                                      |
 | np.exp(ndarray)                                              | 计算e^x                                                      |
 | log、log10、log2、log1p                                      | 计算自然对数、底为10的log、底为2的log、底为(1+x)的log        |
-| np.sign(ndarray)                                             | 计算正负号：1（正）、0（0）、-1（负）                        |
+| np.sign(ndarray)                                             | 计算正负号：1（正）、0（0）、-1                              |
+|                                                              |                                                              |
 | np.ceil(ndarray)np.floor(ndarray)np.rint(ndarray)            | 计算大于等于改值的最小整数计算小于等于该值的最大整数四舍五入到最近的整数，保留dtype |
 | np.modf(ndarray)                                             | 将数组的小数和整数部分以两个独立的数组方式返回               |
 | np.isnan(ndarray)                                            | 返回一个判断是否是NaN的bool型数组                            |

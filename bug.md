@@ -16,3 +16,43 @@
 4. numpy.sqrt()
 
 5. ppps:如果想在任意文件夹下打开notebook,可以打开conda prompt，激活(activate)你需要用到的虚拟环境，然后cd进入你的程序项目所在的文件夹，直接输入jupyter notebook就可以啦。记得把kernel换成相对应的虚拟环境所生成的内核。
+
+6. 读入图片显示[scipy.misc module has no attribute imread?](https://stackoverflow.com/questions/15345790/scipy-misc-module-has-no-attribute-imread)
+
+   解决办法：
+
+   ```Python
+   import imageio
+   content_image = imageio.imread
+   ```
+
+   ```
+   import imageio
+   content_image = imageio.imread
+   ```
+   
+7. 计算矩阵出错
+
+   ```
+   GA = gram_matrix(A)
+       print("GA = " + str(GA.eval()))
+   ```
+
+   修改为：
+
+   ```python
+       GA = tf.convert_to_tensor(GA) 
+       print("GA = " + str(GA.eval()))
+   ```
+
+8. ```python
+   # Append the cache into caches (≈1 line)
+   # cache 本来是空列表
+   # 引起后续错误代码
+   caches = (caches, cache)
+   # 正确代码
+   caches.append(cache)
+   ```
+
+   
+
